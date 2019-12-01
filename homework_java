@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+//键盘输入一个字符串，并统计其中的各种字符串出现的次数
+  //类型有: 大写字母     小写字母    数字    其他
+public class day11_30_01 {
+
+	public static void main(String[] args) {
+		Scanner cs = new Scanner(System.in);
+        String s1=new String();
+        System.out.println("请输入字符串:");
+        s1=cs.nextLine();
+        int d_count=0,x_count=0,s_count=0,q_count=0;
+        for(int i=0;i<s1.length();i++) {
+        	if(s1.charAt(i)>='a' && s1.charAt(i)<='z')
+        		x_count++;
+        	else if(s1.charAt(i)>='A' && s1.charAt(i)<='Z')
+        		d_count++;
+        	else if(s1.charAt(i)>='0' && s1.charAt(i)<='9')
+        		s_count++;
+        	else
+        		q_count++;
+        }
+        System.out.println("大写字母出现的次数为:"+d_count);
+        System.out.println("小写字母出现的次数为:"+x_count);
+        System.out.println(" 数字出现的次数为:"+s_count);
+        System.out.println("其他字符出现的次数为:"+q_count);
+	}
+
+}
